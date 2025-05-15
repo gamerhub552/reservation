@@ -32,9 +32,14 @@
                 <a href="#" class="block px-4 py-3 rounded-md text-gray-700 hover:bg-yellow-100 hover:text-yellow-800 font-medium transition">
                     📈 Sales Report
                 </a>
-                <a href="/reservation" class="block px-4 py-3 rounded-md text-gray-700 hover:bg-purple-100 hover:text-purple-800 font-medium transition">
+                @auth
+                <a href="{{ route('reservation.report') }}" class="block px-4 py-3 rounded-md text-gray-700 hover:bg-purple-100 hover:text-purple-800 font-medium transition">
                     📄 Reservation Report
                 </a>
+
+
+                @endauth
+
                 <a href="#" class="block px-4 py-3 rounded-md text-gray-700 hover:bg-gray-200 hover:text-black font-medium transition">
                     🌐 Manage Website
                 </a>

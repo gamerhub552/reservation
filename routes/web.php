@@ -96,6 +96,5 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
     Route::resource('bookings', BookingController::class);
+    Route::get('/reservation-report', [ReportController::class, 'reservationReport'])->name('reservation.report');
 });
-
-Route::get('/reservation-report', [ReportController::class, 'reservationReport'])->name('dashboard.reservation.report');
